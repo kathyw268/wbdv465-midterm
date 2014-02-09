@@ -15,6 +15,8 @@
       %tr
         %td= user.email
         %td= user.role
+
+ 
         - if can_manage_user?
           %td= link_to 'Show', user
           %td= link_to 'Edit', edit_user_path(user)

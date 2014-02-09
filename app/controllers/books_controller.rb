@@ -18,6 +18,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+    @book.read_by = current_user
 
     if @book.save
       redirect_to @book, notice: 'Book was successfully created.'
@@ -45,6 +46,6 @@ class BooksController < ApplicationController
     end
 
     def book_params
-      params.require(:book).permit(:title, :author, :summary, :page_count)
+      params.require(:book).permit(:title, :author, :summary, :page_count, :ISBN)
     end
 end
