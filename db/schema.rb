@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20140209041417) do
     t.integer  "page_count"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.binary   "ISBN"
+    t.binary   "isbn"
   end
 
   create_table "users", force: true do |t|
