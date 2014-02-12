@@ -11,7 +11,7 @@
         pages
     %p
       ISBN Number: 
-      = @book.ISBN
+      = @book.isbn
 
     - if is_user_admin?
       = link_to 'Edit', edit_book_path(@book)
