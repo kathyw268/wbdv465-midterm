@@ -9,4 +9,5 @@ Wbdv465Midterm::Application.routes.draw do
   delete  "signout"      => "sessions#destroy", as: "signout"
 
   root "books#index"
+  get 'tagged' => 'books#tagged', :as => 'tagged'
 end

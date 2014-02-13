@@ -7,6 +7,7 @@
       %th Author
       %th Page count
       %th ISBN Number
+      %th Tags
       - if is_user_admin?
         %th
         %th
@@ -18,6 +19,7 @@
         %td= book.author
         %td= book.page_count
         %td= book.isbn
+        %td= book.tag_list    
         - if is_user_admin?
           %td= link_to 'Edit', edit_book_path(book)
           %td= link_to 'Destroy', book, :method => :delete, :data => { :confirm => 'Are you sure?' }

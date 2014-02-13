@@ -1,5 +1,8 @@
 class Book < ActiveRecord::Base
 
+  acts_as_taggable_on :tags
+
+
   validates :title,     presence: true
 
   validates :author,    presence: true,

@@ -13,6 +13,8 @@ gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'bcrypt-ruby', '~> 3.1.2'
 
+gem 'acts-as-taggable-on'
+
 group :development do
   gem 'faker'
   gem 'better_errors'

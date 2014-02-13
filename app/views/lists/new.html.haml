@@ -1,0 +1,16 @@
+%h2= "Manage Books for #{@user.name}"
+
+.row
+  .col-md-4
+    = form_tag lists_path, method: :post do
+
+      = hidden_field_tag "user[book_ids][]", nil
+      - @user.each do |user|
+        = label_tag dom_id(user) do
+          = check_box_tag "user[book_ids][]", book.id, @user.book_ids.include?(book.id), id: dom_id(book)
+          = user.name
+        %br
+
+      .actions
+        = submit_tag "Update Books", class: "btn btn-primary"
+        = link_to "Back", school_course_path
