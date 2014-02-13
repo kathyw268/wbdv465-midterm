@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-
+  letsrate_rater
   has_secure_password
   ROLES = ["admin", "member"]
 
