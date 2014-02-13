@@ -19,7 +19,7 @@
         %td= book.author
         %td= book.page_count
         %td= book.isbn
-        %td= book.tag_list    
+        %td= raw book.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
         - if is_user_admin?
           %td= link_to 'Edit', edit_book_path(book)
           %td= link_to 'Destroy', book, :method => :delete, :data => { :confirm => 'Are you sure?' }
